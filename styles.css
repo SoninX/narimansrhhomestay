@@ -762,10 +762,13 @@ a.attraction-icon:hover {
     justify-content: center;
     margin-right: 15px;
     font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .contact-item a {
     color: var(--white);
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-item a:hover {
