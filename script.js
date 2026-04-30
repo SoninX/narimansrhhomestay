@@ -98,4 +98,110 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Room Sliders
+    const roomSliders = document.querySelectorAll('.room-slider');
+    
+    roomSliders.forEach(slider => {
+        const slides = slider.querySelectorAll('.slide');
+        const prevBtn = slider.querySelector('.prev');
+        const nextBtn = slider.querySelector('.next');
+        const dotsContainer = slider.querySelector('.slider-dots');
+        
+        if (slides.length === 0) return;
+        
+        let currentSlide = 0;
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            if (dotsContainer) {
+                dotsContainer.appendChild(dot);
+            }
+        });
+
+        const dots = slider.querySelectorAll('.slider-dot');
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+        }
+    });
+
+    // Booking Modal Logic
+    let selectedRoom = '';
+
+    window.openBookingModal = function(roomName) {
+        selectedRoom = roomName;
+        const modalRoomName = document.getElementById('modalRoomName');
+        if (modalRoomName) {
+            modalRoomName.innerText = 'Check Availability: ' + roomName;
+        }
+        
+        const modal = document.getElementById('bookingModal');
+        if (modal) {
+            modal.style.display = 'flex';
+        }
+    }
+
+    const closeModal = document.querySelector('.close-modal');
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            const modal = document.getElementById('bookingModal');
+            if (modal) modal.style.display = 'none';
+        });
+    }
+
+    window.addEventListener('click', (e) => {
+        const modal = document.getElementById('bookingModal');
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    const checkBtn = document.getElementById('checkAvailabilityBtn');
+    if (checkBtn) {
+        checkBtn.addEventListener('click', () => {
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            
+            if (!checkin || !checkout) {
+                alert('Please select both check-in and check-out dates.');
+                return;
+            }
+
+            // Optional: check if check-out is after check-in
+            if (new Date(checkout) <= new Date(checkin)) {
+                alert('Check-out date must be after check-in date.');
+                return;
+            }
+
+            const message = `Hi, I would like to check availability for the ${selectedRoom} from ${checkin} to ${checkout}.`;
+            const whatsappUrl = `https://wa.me/917907090192?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+            
+            const modal = document.getElementById('bookingModal');
+            if (modal) modal.style.display = 'none';
+            
+            // Clear dates
+            document.getElementById('checkin').value = '';
+            document.getElementById('checkout').value = '';
+        });
+    }
 });

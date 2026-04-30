@@ -29,6 +29,7 @@
             </a>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#rooms">Rooms</a>
                 <a href="#attractions">Attractions</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#reviews">Reviews</a>
@@ -46,7 +47,7 @@
         <div class="hero-content">
             <h1>Welcome to Nariman's Riverstone Haven</h1>
             <p>Your tranquil escape amidst the lush greenery of Kerala</p>
-            <a href="#contact" class="btn btn-primary">Book Your Stay</a>
+            <a href="#rooms" class="btn btn-primary">Book Your Stay</a>
         </div>
     </header>
 
@@ -94,6 +95,165 @@
         </div>
     </section>
 
+    <!-- Rooms -->
+    <section id="rooms" class="section rooms-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Rooms</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Room 1 -->
+                <div class="room-card">
+                    <div class="room-slider">
+                        <div class="slider-wrapper">
+                            <img src="images/rooms/deluxe-river-1.jpg" alt="Deluxe River View Room" class="slide active"
+                                onerror="this.src='https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80'">
+                            <img src="images/rooms/deluxe-river-2.jpg" alt="Deluxe River View Room" class="slide"
+                                onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'">
+                            <img src="images/rooms/deluxe-river-3.jpg" alt="Deluxe River View Room" class="slide"
+                                onerror="this.src='https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <button class="slide-btn prev" aria-label="Previous image"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <button class="slide-btn next" aria-label="Next image"><i
+                                class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Deluxe River View Room</h3>
+                        <p class="availability"><i class="fas fa-door-open"></i> 2 Rooms Available</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-user-friends"></i> 2 Adults</li>
+                            <li><i class="fas fa-water"></i> River view</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-bath"></i> Attached Bathroom</li>
+                        </ul>
+                        <div class="room-bottom">
+                            <p class="tariff">₹2,500 <span>/ night</span></p>
+                            <button class="btn btn-outline btn-block"
+                                onclick="openBookingModal('Deluxe River View Room')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 (Recommended) -->
+                <div class="room-card recommended">
+                    <div class="recommended-badge">Recommended</div>
+                    <div class="room-slider">
+                        <div class="slider-wrapper">
+                            <img src="images/rooms/deluxe-balcony-1.jpg" alt="Deluxe River View Balcony Room"
+                                class="slide active"
+                                onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80'">
+                            <img src="images/rooms/deluxe-balcony-2.jpg" alt="Deluxe River View Balcony Room"
+                                class="slide"
+                                onerror="this.src='https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80'">
+                            <img src="images/rooms/deluxe-balcony-3.jpg" alt="Deluxe River View Balcony Room"
+                                class="slide"
+                                onerror="this.src='https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <button class="slide-btn prev" aria-label="Previous image"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <button class="slide-btn next" aria-label="Next image"><i
+                                class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Deluxe River View Balcony</h3>
+                        <p class="availability"><i class="fas fa-door-open"></i> 2 Rooms Available</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-user-friends"></i> 2 Adults</li>
+                            <li><i class="fas fa-wind"></i> River view balcony</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-bath"></i> Attached Bathroom</li>
+                        </ul>
+                        <div class="room-bottom">
+                            <p class="tariff">₹3,000 <span>/ night</span></p>
+                            <button class="btn btn-primary btn-block"
+                                onclick="openBookingModal('Deluxe River View Balcony Room')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card">
+                    <div class="room-slider">
+                        <div class="slider-wrapper">
+                            <img src="images/rooms/family-1.jpg" alt="Family Room" class="slide active"
+                                onerror="this.src='https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80'">
+                            <img src="images/rooms/family-2.jpg" alt="Family Room" class="slide"
+                                onerror="this.src='https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=80'">
+                            <img src="images/rooms/family-3.jpg" alt="Family Room" class="slide"
+                                onerror="this.src='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <button class="slide-btn prev" aria-label="Previous image"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <button class="slide-btn next" aria-label="Next image"><i
+                                class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Family Room</h3>
+                        <p class="availability"><i class="fas fa-door-open"></i> 3 Rooms Available</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-users"></i> 6+ Adults</li>
+                            <li><i class="fas fa-expand-arrows-alt"></i> Spacious room</li>
+                            <li><i class="fas fa-bath"></i> Attached Bathroom</li>
+                        </ul>
+                        <div class="room-bottom">
+                            <p class="tariff">₹3,500 <span>/ night</span></p>
+                            <button class="btn btn-outline btn-block" onclick="openBookingModal('Family Room')">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 4 -->
+                <div class="room-card">
+                    <div class="room-slider">
+                        <div class="slider-wrapper">
+                            <img src="images/rooms/budget-1.jpg" alt="Budget Room" class="slide active"
+                                onerror="this.src='https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80'">
+                            <img src="images/rooms/budget-2.jpg" alt="Budget Room" class="slide"
+                                onerror="this.src='https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80'">
+                            <img src="images/rooms/budget-3.jpg" alt="Budget Room" class="slide"
+                                onerror="this.src='https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <button class="slide-btn prev" aria-label="Previous image"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <button class="slide-btn next" aria-label="Next image"><i
+                                class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Budget Room</h3>
+                        <p class="availability"><i class="fas fa-door-open"></i> 1 Room Available</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-user-friends"></i> 2 Adults</li>
+                            <li><i class="fas fa-check-circle"></i> Basic amenities</li>
+                            <li><i class="fas fa-bath"></i> Attached Bathroom</li>
+                        </ul>
+                        <div class="room-bottom">
+                            <p class="tariff">₹1,500 <span>/ night</span></p>
+                            <button class="btn btn-outline btn-block" onclick="openBookingModal('Budget Room')">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="rooms-policy">
+                <div class="policy-card">
+                    <h4><i class="fas fa-clock"></i> Check-in & Check-out Policy</h4>
+                    <p><strong>Check-in Time:</strong> 11:00 am</p>
+                    <p><strong>Check-out Time:</strong> 12:00 pm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Attractions -->
     <section id="attractions" class="section attractions-section">
         <div class="container">
@@ -102,14 +262,31 @@
                 <div class="title-underline"></div>
             </div>
             <div class="attractions-grid">
+                <!-- Kottiyoor Temple -->
+                <div class="attraction-card">
+                    <div class="attraction-img">
+                        <img src="images/attractions/kottiyoor_temple.jpg" alt="Kottiyoor Temple"
+                            onerror="this.src='https://images.unsplash.com/photo-1561577553-68d1a193d5de?auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="attraction-info">
+                        <a href="https://www.google.com/maps/dir/Nariman's+riverstone+hevan,+VRQP%2B8F4,+Kottiyoor-Chungakkunnu+Parallel+Rd,+Chungakkunnu+Town,+Kerala+670674/Kottiyoor+Temple,+VVF6%2BMJ9,+Kottiyoor,+Kerala+670651/@11.882421,75.8242271,5940m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x3ba5d1005a7e8d9f:0x81b0fce81f65e931!2m2!1d75.8375733!2d11.8879397!1m5!1m1!1s0x3ba5d0365969dc35:0x44ef4d9b25149e8!2m2!1d75.861595!2d11.87416!3e0?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" class="attraction-icon" aria-label="View Kottiyoor Temple on Google Maps"><i
+                                class="fas fa-om"></i></a>
+                        <h3>Kottiyoor Temple</h3>
+                        <p class="distance"><i class="fas fa-map-marker-alt"></i> 3.5 km away</p>
+                        <p>A highly revered ancient pilgrimage destination known as the 'Dakshina Kasi'.</p>
+                    </div>
+                </div>
                 <!-- Palukachi Mala -->
                 <div class="attraction-card">
                     <div class="attraction-img">
-                        <img src="images/palukachi.png" alt="Palukachi Mala"
+                        <img src="images/attractions/palukachi.png" alt="Palukachi Mala"
                             onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80'">
                     </div>
                     <div class="attraction-info">
-                        <div class="attraction-icon"><i class="fas fa-mountain"></i></div>
+                        <a href="https://www.google.com/maps/dir/Nariman's+riverstone+hevan,+VRQP%2B8F4,+Kottiyoor-Chungakkunnu+Parallel+Rd,+Chungakkunnu+Town,+Kerala+670674/Palukachi+Mala,+WR2X%2BCWP,+Kerala+670674/@11.8911176,75.8365531,2970m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x3ba5d1005a7e8d9f:0x81b0fce81f65e931!2m2!1d75.8375733!2d11.8879397!1m5!1m1!1s0x3ba5ce2cf582a76f:0x1455ad2b02dc4f1a!2m2!1d75.8498281!2d11.9010875!3e0?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" class="attraction-icon" aria-label="View Palukachi Mala on Google Maps"><i
+                                class="fas fa-mountain"></i></a>
                         <h3>Palukachi Mala</h3>
                         <p class="distance"><i class="fas fa-map-marker-alt"></i> 4 km away</p>
                         <p>A beautiful hill destination perfect for trekking and enjoying panoramic views.</p>
@@ -118,27 +295,62 @@
                 <!-- Kottiyoor -->
                 <div class="attraction-card">
                     <div class="attraction-img">
-                        <img src="images/kottiyoor.png" alt="Kottiyoor Wildlife Sanctuary"
+                        <img src="images/attractions/kottiyoor.png" alt="Kottiyoor Wildlife Sanctuary"
                             onerror="this.src='https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80'">
                     </div>
                     <div class="attraction-info">
-                        <div class="attraction-icon"><i class="fas fa-tree"></i></div>
+                        <a href="https://www.google.com/maps/dir/Nariman's+riverstone+hevan,+VRQP%2B8F4,+Kottiyoor-Chungakkunnu+Parallel+Rd,+Chungakkunnu+Town,+Kerala+670674/Kottiyoor+Wildlife+Sanctuary,+VV68%2BC2R,+Kottiyoor,+Kerala+670651/@11.8759299,75.8290033,5940m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x3ba5d1005a7e8d9f:0x81b0fce81f65e931!2m2!1d75.8375733!2d11.8879397!1m5!1m1!1s0x3ba5d05000000001:0x516a1e0c3de944dc!2m2!1d75.8650148!2d11.8611017!3e0?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" class="attraction-icon"
+                            aria-label="View Kottiyoor Wildlife Sanctuary on Google Maps"><i
+                                class="fas fa-tree"></i></a>
                         <h3>Kottiyoor Wildlife Sanctuary</h3>
                         <p class="distance"><i class="fas fa-map-marker-alt"></i> 8 km away</p>
                         <p>Explore the rich biodiversity and dense forests of this protected sanctuary.</p>
                     </div>
                 </div>
+                <!-- Aralam Butterfly Sanctuary -->
+                <div class="attraction-card">
+                    <div class="attraction-img">
+                        <img src="images/attractions/aralam_wildlife.jpg" alt="Aralam Wildlife Sanctuary"
+                            onerror="this.src='https://images.unsplash.com/photo-1596700508605-e4070a927a7c?auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="attraction-info">
+                        <a href="https://www.google.com/maps/dir/Nariman's+riverstone+hevan,+VRQP%2B8F4,+Kottiyoor-Chungakkunnu+Parallel+Rd,+Chungakkunnu+Town,+Kerala+670674/Aralam+butterfly+Sanctuary,+Valayamchal+Rd,+Kannur,+Kerala+670674/@11.9063109,75.7886612,5939m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x3ba5d1005a7e8d9f:0x81b0fce81f65e931!2m2!1d75.8375733!2d11.8879397!1m5!1m1!1s0x3ba5cdc509ed7519:0x42f0ec44ed87fbb1!2m2!1d75.7912328!2d11.9219131!3e0?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" class="attraction-icon"
+                            aria-label="View Aralam Butterfly Sanctuary on Google Maps"><i class="fas fa-bug"></i></a>
+                        <h3>Aralam Wildlife Sanctuary</h3>
+                        <p class="distance"><i class="fas fa-map-marker-alt"></i> 9 km away</p>
+                        <p>A vibrant sanctuary home to numerous species of exotic and beautiful butterflies.</p>
+                    </div>
+                </div>
                 <!-- Palchuram -->
                 <div class="attraction-card">
                     <div class="attraction-img">
-                        <img src="images/palchuram.png" alt="Palchuram Waterfalls"
+                        <img src="images/attractions/palchuram.png" alt="Palchuram Waterfalls"
                             onerror="this.src='https://images.unsplash.com/photo-1432405972618-c60002a113f9?auto=format&fit=crop&w=800&q=80'">
                     </div>
                     <div class="attraction-info">
-                        <div class="attraction-icon"><i class="fas fa-water"></i></div>
+                        <a href="https://www.google.com/maps/dir/Nariman's+riverstone+hevan,+VRQP%2B8F4,+Kottiyoor-Chungakkunnu+Parallel+Rd,+Chungakkunnu+Town,+Kerala+670674/Palchuram+waterfalls+Kottiyoor+Wildlife+Sanctuary,+RWX9%2BCR2,+Palchuram,+Kottiyoor,+Kerala+670651/@11.8696335,75.8325826,11880m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x3ba5d1005a7e8d9f:0x81b0fce81f65e931!2m2!1d75.8375733!2d11.8879397!1m5!1m1!1s0x3ba5dbbd2c65a9a7:0x1cb30726c47de8b!2m2!1d75.9195067!2d11.8485135!3e0?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" class="attraction-icon"
+                            aria-label="View Palchuram Waterfalls on Google Maps"><i class="fas fa-water"></i></a>
                         <h3>Palchuram Waterfalls</h3>
                         <p class="distance"><i class="fas fa-map-marker-alt"></i> 14 km away</p>
                         <p>Magnificent cascading waterfalls nestled within the lush greenery.</p>
+                    </div>
+                </div>
+                <!-- Komachi Park Wayanad -->
+                <div class="attraction-card">
+                    <div class="attraction-img">
+                        <img src="images/attractions/komachi_park.png" alt="Komachi Park Wayanad"
+                            onerror="this.src='https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="attraction-info">
+                        <a href="https://www.google.com/maps/dir/Nariman's+riverstone+hevan,+VRQP%2B8F4,+Kottiyoor-Chungakkunnu+Parallel+Rd,+Chungakkunnu+Town,+Kerala+670674/Komachi+Park+Wayanad,+Boys+Town,+Mananthavadi,+Kerala+670644/@11.8667305,75.8326962,11880m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x3ba5d1005a7e8d9f:0x81b0fce81f65e931!2m2!1d75.8375733!2d11.8879397!1m5!1m1!1s0x3ba5dbeb4805191d:0x201256abf1a5f544!2m2!1d75.9162978!2d11.8396491!3e0?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" class="attraction-icon"
+                            aria-label="View Komachi Park Wayanad on Google Maps"><i class="fas fa-camera"></i></a>
+                        <h3>Komachi Park Wayanad</h3>
+                        <p class="distance"><i class="fas fa-map-marker-alt"></i> 15 km away</p>
+                        <p>India’s first photography-themed park, nestled in the heart of beautiful Wayanad.</p>
                     </div>
                 </div>
             </div>
@@ -253,11 +465,11 @@
                     <p>We'd love to hear from you. Send us an enquiry or reach out directly.</p>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <a href="tel:+917907090192">+91 7907090192</a>
+                        <a href="tel:+917306118613">+91 7306118613</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:abhimanyups999@gmail.com">abhimanyups999@gmail.com</a>
+                        <a href="mailto:narimansriverstonehavean@gmail.com">narimansriverstonehavean@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-instagram"></i>
@@ -270,7 +482,7 @@
                     <form id="enquiry-form" action="https://api.web3forms.com/submit" method="POST"
                         class="contact-form">
                         <!-- Web3Forms Access Key: User needs to replace YOUR_ACCESS_KEY_HERE with their real key -->
-                        <input type="hidden" name="access_key" value="b2d4fcb9-d40f-41a4-bb44-3d07e849d444">
+                        <input type="hidden" name="access_key" value="207de037-9efc-4b45-a24d-7aba6dc3ea4f">
 
                         <!-- Custom Subject -->
                         <input type="hidden" name="subject" value="New Enquiry from Nariman's Homestay Website">
@@ -312,8 +524,26 @@
         </div>
     </footer>
 
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalRoomName">Check Availability</h3>
+            <div class="form-group">
+                <label for="checkin">Check-in Date</label>
+                <input type="date" id="checkin" class="form-control">
+            </div>
+            <div class="form-group mt-2">
+                <label for="checkout">Check-out Date</label>
+                <input type="date" id="checkout" class="form-control">
+            </div>
+            <button id="checkAvailabilityBtn" class="btn btn-primary btn-block mt-4">Check Availability on
+                WhatsApp</button>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/917907090192" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/917306118613" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
