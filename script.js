@@ -204,4 +204,23 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('checkout').value = '';
         });
     }
+
+    // Gallery Expand Logic
+    const showMoreGalleryBtn = document.getElementById('showMoreGalleryBtn');
+    const galleryWrapper = document.getElementById('galleryWrapper');
+    if (showMoreGalleryBtn && galleryWrapper) {
+        showMoreGalleryBtn.addEventListener('click', () => {
+            galleryWrapper.classList.toggle('expanded');
+            if (galleryWrapper.classList.contains('expanded')) {
+                showMoreGalleryBtn.innerText = 'Show Less';
+            } else {
+                showMoreGalleryBtn.innerText = 'Show More';
+                // Optional: Scroll back to top of gallery when collapsing
+                const gallerySection = document.getElementById('gallery');
+                if (gallerySection) {
+                    gallerySection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    }
 });
