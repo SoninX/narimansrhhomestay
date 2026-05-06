@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = document.getElementById('form-result');
 
     if (form) {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
             const formData = new FormData(form);
             const object = Object.fromEntries(formData);
             const json = JSON.stringify(object);
-            
+
             result.style.display = 'block';
             result.innerHTML = "Sending...";
             result.style.color = "var(--text-light)";
@@ -74,42 +74,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: json
             })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    result.innerHTML = json.message || "Form submitted successfully!";
-                    result.style.color = "var(--primary-green)";
-                    form.reset();
-                } else {
-                    console.log(response);
-                    result.innerHTML = json.message || "Something went wrong!";
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = json.message || "Form submitted successfully!";
+                        result.style.color = "var(--primary-green)";
+                        form.reset();
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message || "Something went wrong!";
+                        result.style.color = "red";
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
                     result.style.color = "red";
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                result.innerHTML = "Something went wrong!";
-                result.style.color = "red";
-            })
-            .then(function() {
-                setTimeout(() => {
-                    result.style.display = "none";
-                }, 5000);
-            });
+                })
+                .then(function () {
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 5000);
+                });
         });
     }
 
     // Room Sliders
     const roomSliders = document.querySelectorAll('.room-slider');
-    
+
     roomSliders.forEach(slider => {
         const slides = slider.querySelectorAll('.slide');
         const prevBtn = slider.querySelector('.prev');
         const nextBtn = slider.querySelector('.next');
         const dotsContainer = slider.querySelector('.slider-dots');
-        
+
         if (slides.length === 0) return;
-        
+
         let currentSlide = 0;
 
         // Create dots
@@ -128,9 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
         function goToSlide(n) {
             slides[currentSlide].classList.remove('active');
             if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
-            
+
             currentSlide = (n + slides.length) % slides.length;
-            
+
             slides[currentSlide].classList.add('active');
             if (dots[currentSlide]) dots[currentSlide].classList.add('active');
         }
@@ -146,13 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Booking Modal Logic
     let selectedRoom = '';
 
-    window.openBookingModal = function(roomName) {
+    window.openBookingModal = function (roomName) {
         selectedRoom = roomName;
         const modalRoomName = document.getElementById('modalRoomName');
         if (modalRoomName) {
             modalRoomName.innerText = 'Check Availability: ' + roomName;
         }
-        
+
         const modal = document.getElementById('bookingModal');
         if (modal) {
             modal.style.display = 'flex';
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkBtn.addEventListener('click', () => {
             const checkin = document.getElementById('checkin').value;
             const checkout = document.getElementById('checkout').value;
-            
+
             if (!checkin || !checkout) {
                 alert('Please select both check-in and check-out dates.');
                 return;
@@ -192,13 +192,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const message = `Hi, I would like to check availability for the ${selectedRoom} from ${checkin} to ${checkout}.`;
-            const whatsappUrl = `https://wa.me/917907090192?text=${encodeURIComponent(message)}`;
-            
+            const whatsappUrl = `https://wa.me/917306118613?text=${encodeURIComponent(message)}`;
+
             window.open(whatsappUrl, '_blank');
-            
+
             const modal = document.getElementById('bookingModal');
             if (modal) modal.style.display = 'none';
-            
+
             // Clear dates
             document.getElementById('checkin').value = '';
             document.getElementById('checkout').value = '';
